@@ -90,8 +90,7 @@ if __name__ == "__main__":
     t.set_description("loss %.2f accuracy %.2f -- %.2f + %.2f + %.2f + %.2f = %.2f -- %d" %
       (loss, accuracy,
       fp_time, bp_time, opt_time, finish_time,
-      fp_time + bp_time + opt_time + finish_time,
-      Tensor.allocated))
+      fp_time + bp_time + opt_time + finish_time))
 
     del out, y, loss
 
