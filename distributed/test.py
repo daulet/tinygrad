@@ -18,7 +18,7 @@ class TestDistributed(unittest.TestCase):
         port = 65432
         proc = Process(target=run_remote, args=[port])
         proc.start()
-        time.sleep(1)
+        time.sleep(0.1)
 
         a = np.ones([3,3]) * 3
         b = np.ones_like(a) * 6
@@ -28,6 +28,6 @@ class TestDistributed(unittest.TestCase):
         proc.join()
 
         res == np.ones_like(a) * 9
-
+        
 if __name__ == "__main__":
     unittest.main()
